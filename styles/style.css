@@ -1,17 +1,40 @@
+/* VARIÁVEIS CSS */
 :root {
-    --cor-de-fundo: #F5F5F5;
-    --cor-de-fundo-menu: #ffffff;
-    --cor-do-link: #000000;
+    --cor-de-texto: #464646;
+    --cor-texto-menu: #EDDFB3;
+    --cor-texto-rodape: #EDDFB3;
+    --cor-texto-campo: #698269;
+    --cor-texto-botão: #EDDFB3;
+    --cor-texto-link: #464646;
+    --cor-de-fundo-body: #D8CCA3;
+    --cor-de-fundo-menu: #87805E;
+    --cor-de-fundo-rodape: #87805E;
+    --cor-de-fundo-seção: #B09B71;
+    --cor-de-fundo-card: #FFFFFF;
+    --cor-de-fundo-campo: #FFFFFF;
+    --cor-de-fundo-botão: #698269;
+    
+    --fonte-primaria: 'Raleway', sans-serif;
+    --fonte-secundaria: 'Playwrite CA', cursive; /* nome -assinatura */
 }
 
 /* CORPO DA PÁGINA */
-body {
-    background-color: var(--cor-de-fundo);
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
+* {
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
-    padding: 0;
-    line-height: 1.6;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+body {
+    padding: 0% 0%;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-de-fundo-body);
+    color: var(--cor-de-texto);
 }
 
 ol, ul, li {
@@ -20,90 +43,393 @@ ol, ul, li {
 
 a {
     text-decoration: none;
-    color: var(--cor-do-link);
+    color: var(--cor-texto-link);
 }
 
-/* ------------------------------ Seção Menu -------------------------------*/
+/* MENU(cabeçalho) */
 .cabecalho {
-    background-color: var(--cor-de-fundo-menu);
+    padding: 32px 152px 32px 152px;
+    background-color:var(--cor-de-fundo-menu);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
-.cabecalho__logo {
-    max-width: 80px; /* Ajuste para telas pequenas */
+.cabecalho__marca {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .cabecalho__titulo {
-    font-size: 1.2rem;
-    text-align: center;
+    color: var(--cor-texto-menu);
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .navegacao__lista {
-    display: none;
+    display: flex;
+    gap: 40px;
 }
 
 .navegacao__elemento a {
+    color: var(--cor-texto-menu);
     font-size: 0.9rem;
-}
-/* ------------------------------ Seção Apresentação ------------------------------*/
-
-
-/* ------------------------------ Seção Sobre mim ----------------------------------*/
-
-
-/*------------------------------ Seção de Habilidades ------------------------------*/
-
-
-/*------------------------------ Seção de Hobbies --------------------------------*/
-
-
-/*------------------------------ Seção de Projetos --------------------------------*/
-
-
-/*------------------------------ Seção de Contato ---------------------------------*/
-
-
-/* ------------------------------ Responsividade ---------------------------------------*/
-
-/* Tablets e telas maiores */
-@media (min-width: 768px) {
-    .cabecalho {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .cabecalho__logo {
-        max-width: 100px;
-    }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
-    .navegacao__elemento a {
-        font-size: 1rem;
-    }
+    font-weight: 500;
 }
 
-/* Telas grandes */
-@media (min-width: 1024px) {
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
-    }
+/* SEÇÃO DE APRESENTAÇÃO */
+.apresentacao {
+    padding: 32px 152px 32px 152px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: auto;
+}
 
-    .navegacao__elemento a {
-        font-size: 1.1rem;
-    }
+.apresentacao__conteiner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.apresentacao__foto {
+    width: 368px;
+    height: auto;
+}
+
+.apresentacao__titulo {
+    font-size: 3.25rem;
+    font-weight: 700;
+}
+
+.apresentacao__subtitulo {
+    font-size: 1.375rem;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.redes {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.redes__elemento {
+    color: var(--cor-texto-link);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* SEÇÃO SOBRE MIM */
+.sobre-mim {
+    padding: 64px 152px 64px 152px;
+    background-color: var(--cor-de-fundo-seção);
+}
+
+.sobre-mim__quadro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mim__biografia {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sobre-mim__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sobre-mim__texto {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* SEÇÃO DE HABILIDADES E HOBBIES */
+.habilidades {
+    padding: 32px 152px 88px 152px;
+}
+
+.hobbies {
+    padding: 0px 152px 88px 152px;
+}
+
+.habilidades__quadro, .hobbies__quadro {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.habilidades__titulo, .hobbies__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.habilidades__lista, .hobbies__lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.habilidades__elemento, .hobbies__elemento {
+    width: 176px;
+    height: 174px;
+    padding: 16px 16px;
+    background-color: var(--cor-de-fundo-card);
+    border: 1px solid #698269;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.habilidades__nome, .hobbies__nome {
+    color: var(--cor-de-texto);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* SEÇÃO DE FORMAÇÃO ACADÊMICA E CURSOS */
+.formacao {
+    padding: 82px 152px 82px 152px;
+    background-color: var(--cor-de-fundo-seção);
+}
+
+.formacao__quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.formacao__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.formacao__lista {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.formacao__elemento {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formacao_logos {
+    background-color: var(--cor-de-fundo-card);
+    border: 1px solid #698269;
+    border-radius: 4px;
+    display: flex;
+    padding: 78px 89px 78px 89px;
+}
+
+.formacao__icone {
+    max-width: 100%;
+}
+
+.formacao__informacoes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.formacao__nome {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.formacao__detalhe{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* SEÇÃO DE PROJETOS/EXPERIÊNCIAS */
+.projetos {
+    padding: 32px 152px 64px 152px;
+}
+
+.projetos__quadro {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projetos_web {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.projetos__image {
+    /* width: 752px; dimensão no figma*/ 
+    border-radius: 4px;
+    border: 2px solid #87805E;
+}
+
+.projetos__conteiner {
+    /* width: 348px; dimensão no figma*/
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.projetos__nome {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.projetos__descricao {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.projetos__botao {
+    width: 116px;
+    height: auto;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid #698269;
+    border-radius: 4px;
+    background-color: var(--cor-de-fundo-botão);
+    color: var(--cor-texto-botão);
+}
+
+/* SEÇÃO DE CONTATO */
+.contato {
+    padding: 64px 152px 64px 152px;
+    background-color: var(--cor-de-fundo-seção);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.contato__image {
+    width: 506px;
+    height: auto;
+}
+
+.contato__quadro {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.contato__descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contato__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contato__texto {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+/* ESTILOS DOS CAMPOS */
+.contato__campo {
+    width: 100%;
+    padding: 10px;
+    color: var(--cor-texto-campo);
+    background-color: var(--cor-de-fundo-campo); /* fundo branco */
+    border: 1px solid #FFFFFF; /* borda branca */
+    border-radius: 4px; /* bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra leve */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out; /* animação de cor */
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none; /* sem marcação ao redor */
+}
+
+.contato__campo:focus {
+    border-color: var(--cor-de-fundo-botão); /* verde de foco */
+    border: 2px solid #698269;
+}
+
+/* REDIRECIONAMENTO */
+.contato__campo--textarea {
+    resize: none; /* previne redimensionamento */
+    height: 100px;
+}
+
+/* BOTÃO */
+.contato__botao {
+    width: 165px;
+    padding: 16px;
+    background-color: var(--cor-de-fundo-botão);
+    color: var(--cor-texto-botão);
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato__botao:hover {
+    background-color: #43766C; /* verde mais escuro ao passar o mouse */
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 32px 32px 32px 32px;
+    background-color: var(--cor-de-fundo-rodape);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.rodape__texto {
+    color: var(--cor-texto-rodape);
+    font-size: 0.875rem;
+    font-weight: 500;
 }
