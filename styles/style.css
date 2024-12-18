@@ -4,7 +4,7 @@
     --cor-texto-menu: #EDDFB3;
     --cor-texto-rodape: #EDDFB3;
     --cor-texto-campo: #698269;
-    --cor-texto-botão: #EDDFB3;
+    --cor-texto-botão: #FFFFFF;
     --cor-texto-link: #464646;
     --cor-de-fundo-body: #D8CCA3;
     --cor-de-fundo-menu: #87805E;
@@ -48,7 +48,7 @@ a {
 
 /* MENU(cabeçalho) */
 .cabecalho {
-    padding: 32px 152px 32px 152px;
+    padding: 32px 100px 32px 100px;
     background-color:var(--cor-de-fundo-menu);
     display: flex;
     justify-content: space-between;
@@ -58,7 +58,7 @@ a {
 .cabecalho__marca {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .cabecalho__titulo {
@@ -68,9 +68,13 @@ a {
     font-weight: 400;
 }
 
+.cabecalho__logo {
+    max-width: 100%;
+}
+
 .navegacao__lista {
     display: flex;
-    gap: 40px;
+    gap: 32px;
 }
 
 .navegacao__elemento a {
@@ -81,16 +85,16 @@ a {
 
 /* SEÇÃO DE APRESENTAÇÃO */
 .apresentacao {
-    padding: 32px 152px 32px 152px;
+    padding: 32px 100px 32px 100px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: auto;
 }
 
 .apresentacao__conteiner {
-    width: 100%;
+    max-width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -115,7 +119,7 @@ a {
 
 .redes {
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     gap: 32px;
 }
 
@@ -127,7 +131,7 @@ a {
 
 /* SEÇÃO SOBRE MIM */
 .sobre-mim {
-    padding: 64px 152px 64px 152px;
+    padding: 64px 100px 64px 100px;
     background-color: var(--cor-de-fundo-seção);
 }
 
@@ -137,8 +141,13 @@ a {
     align-items: center;
 }
 
+.sobre-mim__ilustracao {
+    width: 297px;
+    height: auto;
+}
+
 .sobre-mim__biografia {
-    width: 100%;
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -157,15 +166,15 @@ a {
 
 /* SEÇÃO DE HABILIDADES E HOBBIES */
 .habilidades {
-    padding: 32px 152px 88px 152px;
+    padding: 32px 100px 88px 100px;
 }
 
 .hobbies {
-    padding: 0px 152px 88px 152px;
+    padding: 0px 100px 88px 100px;
 }
 
 .habilidades__quadro, .hobbies__quadro {
-    width: 100%;
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -187,7 +196,7 @@ a {
 .habilidades__elemento, .hobbies__elemento {
     width: 176px;
     height: 174px;
-    padding: 16px 16px;
+    padding: 16px;
     background-color: var(--cor-de-fundo-card);
     border: 1px solid #698269;
     border-radius: 4px;
@@ -206,13 +215,14 @@ a {
 
 /* SEÇÃO DE FORMAÇÃO ACADÊMICA E CURSOS */
 .formacao {
-    padding: 82px 152px 82px 152px;
+    padding: 82px 100px 82px 100px;
     background-color: var(--cor-de-fundo-seção);
 }
 
 .formacao__quadro {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 32px;
 }
@@ -223,7 +233,7 @@ a {
 }
 
 .formacao__lista {
-    max-width: 100%;
+    max-width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -237,15 +247,15 @@ a {
 }
 
 .formacao_logos {
+    padding: 78px 89px 78px 89px;
     background-color: var(--cor-de-fundo-card);
     border: 1px solid #698269;
     border-radius: 4px;
     display: flex;
-    padding: 78px 89px 78px 89px;
 }
 
 .formacao__icone {
-    max-width: 100%;
+    max-width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
 }
 
 .formacao__informacoes {
@@ -265,9 +275,9 @@ a {
     font-weight: 500;
 }
 
-/* SEÇÃO DE PROJETOS/EXPERIÊNCIAS */
+/* SEÇÃO DE PROJETOS */
 .projetos {
-    padding: 32px 152px 64px 152px;
+    padding: 32px 100px 64px 100px;
 }
 
 .projetos__quadro {
@@ -284,20 +294,19 @@ a {
 
 .projetos_web {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
 }
 
 .projetos__image {
-    /* width: 752px; dimensão no figma*/ 
+    width: 732px;
     border-radius: 4px;
     border: 2px solid #87805E;
 }
 
 .projetos__conteiner {
-    /* width: 348px; dimensão no figma*/
+    flex: 1 1 320px; /* Cada item vai ocupar o mínimo possível e crescer até 320px */
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -314,9 +323,9 @@ a {
 }
 
 .projetos__botao {
+    padding: 10px;
     width: 116px;
     height: auto;
-    padding: 10px;
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
@@ -328,7 +337,7 @@ a {
 
 /* SEÇÃO DE CONTATO */
 .contato {
-    padding: 64px 152px 64px 152px;
+    padding: 64px 100px 64px 100px;
     background-color: var(--cor-de-fundo-seção);
     display: flex;
     justify-content: center;
@@ -342,7 +351,7 @@ a {
 }
 
 .contato__quadro {
-    width: 100%;
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -367,15 +376,15 @@ a {
 }
 
 .contato__formulario {
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     display: flex;
     flex-direction: column;
     gap: 32px;
-    width: 100%;
 }
 
 /* ESTILOS DOS CAMPOS */
-.contato__campo {
-    width: 100%;
+.form-grupo__campo {
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
     padding: 10px;
     color: var(--cor-texto-campo);
     background-color: var(--cor-de-fundo-campo); /* fundo branco */
@@ -390,19 +399,29 @@ a {
     outline: none; /* sem marcação ao redor */
 }
 
-.contato__campo:focus {
+.form-grupo__campo:focus {
     border-color: var(--cor-de-fundo-botão); /* verde de foco */
     border: 2px solid #698269;
 }
 
 /* REDIRECIONAMENTO */
-.contato__campo--textarea {
+.form-grupo__campo--textarea {
     resize: none; /* previne redimensionamento */
     height: 100px;
 }
 
+/* mensagem-erro */
+.form-grupo__erro {
+    color: #803D3B;
+    display: none; /* A mensagem está escondida por padrão */
+}
+
+.mostrar-erro {
+    display: block; /* A mensagem é exibida quando esta classe é adicionada */
+}
+
 /* BOTÃO */
-.contato__botao {
+.form-botao {
     width: 165px;
     padding: 16px;
     background-color: var(--cor-de-fundo-botão);
@@ -415,13 +434,13 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.contato__botao:hover {
+.form-botao:hover {
     background-color: #43766C; /* verde mais escuro ao passar o mouse */
 }
 
 /* RODAPÉ */
 .rodape {
-    padding: 32px 32px 32px 32px;
+    padding: 32px;
     background-color: var(--cor-de-fundo-rodape);
     display: flex;
     flex-direction: column;

@@ -1,41 +1,311 @@
 /* ------------------------------ Responsividade ----------------------------------*/
 
 /* Tablets e telas maiores */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+    html, body {
+        overflow-x: hidden; /* Previne overflow horizontal */
+    }
+    /* MENU(cabeçalho) */
     .cabecalho {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        padding: 16px 32px;
     }
-
-    .cabecalho__logo {
-        max-width: 100px;
+    .navegacao__lista li:not(:nth-child(6)) {
+        display: none;
     }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
     .navegacao__elemento a {
+        color: #464646;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    /* SEÇÃO DE APRESENTAÇÃO */
+    .apresentacao {
+        padding: 32px;
+        gap: 32px;
+    }
+    .apresentacao__foto {
+        width: 146px;
+        height: auto;
+    }
+    .apresentacao__conteiner {
+        gap: 8px;
+    }
+    .apresentacao__titulo {
+        font-size: 1.375rem;
+    }
+    .apresentacao__subtitulo {
+        font-size: 1rem;
+    }
+
+    /* SEÇÃO SOBRE MIM */
+    .sobre-mim {
+        padding: 32px;
+    }
+    .sobre-mim__ilustracao {
+        width: 152px;
+        height: auto;
+    }
+    .sobre-mim__titulo {
+        font-size: 1.375rem;
+    }
+    .sobre-mim__texto {
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE HABILIDADES E HOBBIES */
+    .habilidades, .hobbies {
+        padding: 32px;
+    }
+    .habilidades__titulo, .hobbies__titulo {
+        font-size: 1.375rem;
+    }
+    .habilidades__elemento, .hobbies__elemento {
+        width: 224px;
+        height: 118px;
+    }
+    .habilidades__nome, .hobbies__nome {
+        white-space: nowrap; /* Faz com que o texto não quebre em novas linhas */
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE FORMAÇÃO ACADÊMICA E CURSOS */
+    .formacao {
+        padding: 32px;
+    }
+    .formacao__titulo {
+        font-size: 1.375rem;
+    }
+    .formacao_logos {
+        padding: 30px 70px;
+    }
+    .formacao__nome {
+        font-size: 1rem;
+    }
+    .formacao__detalhe {
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE PROJETOS */
+    .projetos {
+        padding: 32px 32px 64px;
+    }
+    .projetos__quadro {
+        gap: 16px;
+    }
+    .projetos__titulo {
+        font-size: 1.375rem;
+    }
+    .projetos_web {
+        flex-direction: column;
+        align-items: start;
+    }
+    .projetos__image {
+        width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
+    }
+    .projetos__conteiner {
+        flex: 1 1 92px; /* Cada item vai ocupar o mínimo possível e crescer até 92px */
+    }
+    .projetos__nome {
+        font-size: 1.375rem;
+    }
+    .projetos__descricao {
+        font-size: 1rem;
+    }
+    .projetos__botao {
+        padding: 12px 16px;
+        width: 120px;
+        height: auto;
+        font-size: 1rem;
+    }
+
+    /* SEÇÃO DE CONTATO */
+    .contato {
+        padding: 32px;
+    }
+    .contato__image {
+        display: none;
+    }
+    .contato__descricao {
+        gap: 8px;
+    }
+    .contato__titulo {
+        font-size: 1.375rem;
+    }
+    .form-botao {
+        width: 151px;
+        padding: 12px 16px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    /* RODAPÉ */
+    .rodape__texto {
         font-size: 1rem;
     }
 }
 
-/* Telas grandes */
-@media (min-width: 1024px) {
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
+/* Mobile e telas menores */
+@media (min-width: 360px) and (max-width: 767px) {
+    /* MENU(cabeçalho) */
+    .cabecalho {
+        padding: 16px;
+        gap: auto;
+    }
+    .navegacao__lista li:not(:nth-child(6)) {
+        display: none;
+    }
+    .navegacao__elemento a {
+        color: #464646;
+        font-size: 0.875rem;
+        font-weight: 600;
     }
 
-    .navegacao__elemento a {
-        font-size: 1.1rem;
+    /* SEÇÃO DE APRESENTAÇÃO */
+    .apresentacao {
+        padding: 16px;
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+    .apresentacao__foto {
+        width: 98px;
+        height: auto;
+    }
+    .apresentacao__conteiner {
+        gap: 16px;
+    }
+    .apresentacao__titulo {
+        font-size: 1.375rem;
+    }
+    .apresentacao__subtitulo {
+        font-size: 0.875rem;
+    }
+    .redes {
+        gap: 8px;
+    }
+    .redes__elemento {
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    
+    /* SEÇÃO SOBRE MIM */
+    .sobre-mim {
+        padding: 32px 16px;
+    }
+    .sobre-mim__ilustracao {
+        display: none;
+    }
+    .sobre-mim__titulo {
+        font-size: 1.375rem;
+    }
+    .sobre-mim__texto {
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE HABILIDADES E HOBBIES */
+    .habilidades, .hobbies {
+        padding: 16px;
+    }
+    .habilidades__titulo, .hobbies__titulo {
+        font-size: 1.375rem;
+    }
+    .habilidades__lista, .hobbies__lista {
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite quebrar os itens quando não cabem */
+    }
+    .habilidades__elemento, .hobbies__elemento {
+        padding: 10px 8px;
+        width: 146px;
+        height: auto;
+    }
+    .habilidades__nome, .hobbies__nome {
+        white-space: nowrap; /* Faz com que o texto não quebre em novas linhas */
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE FORMAÇÃO ACADÊMICA E CURSOS */
+    .formacao {
+        padding: 32px;
+    }
+    .formacao__titulo {
+        font-size: 1.375rem;
+    }
+    .formacao__lista {
+        width: 296px;
+        height: auto;
+        flex-direction: column;
+    }
+    .formacao_logos {
+        padding: 16px;
+        justify-content: center;
+    }
+    .formacao__nome {
+        font-size: 1rem;
+    }
+    .formacao__detalhe {
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE PROJETOS */
+    .projetos {
+        padding: 32px;
+    }
+    .projetos__quadro {
+        gap: 16px;
+    }
+    .projetos__titulo {
+        font-size: 1.375rem;
+    }
+    .projetos_web {
+        flex-direction: column;
+        align-items: start;
+    }
+    .projetos__image {
+        width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
+    }
+    .projetos__conteiner {
+        flex: 1 1 92px; /* Cada item vai ocupar o mínimo possível e crescer até 92px */
+    }
+    .projetos__nome {
+        font-size: 1rem;
+    }
+    .projetos__descricao {
+        font-size: 0.875rem;
+    }
+    .projetos__botao {
+        padding: 12px 16px;
+        width: 108px;
+        height: auto;
+        font-size: 0.875rem;
+    }
+
+    /* SEÇÃO DE CONTATO */
+    .contato {
+        padding: 32px;
+    }
+    .contato__image {
+        display: none;
+    }
+    .contato__descricao {
+        gap: 8px;
+    }
+    .contato__titulo {
+        font-size: 1.375rem;
+    }
+    .form-botao {
+        width: 151px;
+        padding: 12px 16px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    /* RODAPÉ */
+    .rodape__texto {
+        font-size: 0.938rem;
     }
 }
+
+/* Desktops */
+/* @media (min-width: 1200px) {} */

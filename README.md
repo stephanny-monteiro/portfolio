@@ -1,7 +1,5 @@
-Imagem de capa
-Adicione a imagem de capa com o tema do seu projeto:
-
 **Portfólio**
+
 Meu portfólio é uma página web responsiva de apresentação pessoal que reúne minhas habilidades técnicas, hobbies, formações, projetos desenvolvidos e uma seção sobre mim. O projeto se trata de um challenge da trilha de especialização em Front-end do Programa Oracle Next Education (ONE), turma G7, que tem o objetivo de destacar minha jornada com desenvolvedora em início de carreira. A página foi construída utilizando HTML, CSS e JavaScript, com um layout intuitivo e uma paleta de cores autêntica.
 
 **Funcionalidades do projeto**
@@ -22,4 +20,4 @@ Meu portfólio é uma página web responsiva de apresentação pessoal que reún
 Para acessar o código-fonte do projeto, clique no link: [Portfolio](https://github.com/stephanny-monteiro/portfolio).
 
 **Página do projeto**
-Para acessar a página do projeto, clique no link: [Decodificador de texto](https://decodificador-de-texto-omega-cyan.vercel.app/).
+Para acessar a página do projeto, clique no link.

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsividade.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fontes do Projeto: Raleway e Playwrite CA -->
@@ -34,9 +35,9 @@
     <!-- Seção de Apresentação -->
     <main class="conteudo">
     <section class="apresentacao">
-        <img class="apresentacao__foto" src="assets/profile.png" alt="Foto de perfil">
+        <img class="apresentacao__foto" src="assets/profile-stephannymonteiro.png" alt="Foto de perfil">
         <div class="apresentacao__conteiner">
-            <h2 class="apresentacao__titulo">— Olá, bem-vindo(a) ao meu portfólio! Por Ste, desenvolvedora web_</h2>
+            <h2 class="apresentacao__titulo">— Olá, bem-vindo(a) ao meu portfólio! Ste, web developer_</h2>
             <p class="apresentacao__subtitulo">Formada em Marketing pela UPM, atualmente, estou participando do projeto Oracle ONE na Alura Latam.</p>
             <ul class="redes">
                 <li class="redes__elemento"><a href="https://github.com/stephanny-monteiro">Github <img src="assets/arrow.png" alt="Seta"></a></li>
@@ -129,7 +130,7 @@
                     </div>
                     <div class="formacao__informacoes">
                         <h3 class="formacao__nome">Marketing</h3>
-                        <p class="formacao__detalhe">2024 - Universidade Presbiteriana Mackenzie</p>
+                        <p class="formacao__detalhe">2024 - Mackenzie</p>
                     </div>
                 </li>
                 <li class="formacao__elemento">
@@ -148,7 +149,7 @@
     <!-- Seção de Projetos -->
     <section class="projetos" id="projetos">
         <div class="projetos__quadro">
-            <h2 class="projetos__titulo">Experiência profissional</h2>
+            <h2 class="projetos__titulo">Projetos web</h2>
             <div class="projetos_web">
                 <img class="projetos__image" src="./assets/projeto_decodificador-de-texto.png" alt="Projeto Codificador e Decodificador">
                 <div class="projetos__conteiner">
@@ -162,17 +163,31 @@
 
     <!-- Seção de Contato -->
     <section class="contato" id="contato">
-        <img class="contato__image" src="./assets/contact_image.png" alt="Telefone">
+        <img class="contato__image" src="./assets/contact_image.png" alt="Ícone ilustrativo de contato">
         <div class="contato__quadro">
             <div class="contato__descricao">
                 <h2 class="contato__titulo">Contato</h2>
-                <p class="contato__texto">— Preencha o formulário abaixo que, logo, entrarei em contato.</p>
+                <p class="contato__texto">Preencha o formulário abaixo que, logo, entrarei em contato.</p>
             </div>
             <form class="contato__formulario">
-                <input class="contato__campo" type="text" placeholder="Nome">
-                <input class="contato__campo" type="email" placeholder="E-mail">
-                <textarea class="contato__campo contato__campo--textarea" placeholder="Mensagem"></textarea>
-                <button class="contato__botao" type="submit">Enviar</button>
+                <div class="form-grupo">
+                    <label for="Nome"></label>
+                    <input class="form-grupo__campo" type="text" id="name" name="nome" placeholder="Nome" required>
+                    <span class="form-grupo__erro" id="nameErro"></span>
+                </div>
+                <div class="form-grupo">
+                    <label for="E-mail"></label>
+                    <input class="form-grupo__campo" type="email" id="email" name="email" placeholder="E-mail" required>
+                    <span class="form-grupo__erro" id="emailErro"></span>
+                </div>
+                <div class="form-grupo">
+                    <label for="Mensagem"></label>
+                    <textarea class="form-grupo__campo form-grupo__campo--textarea" name="message" id="message" placeholder="Mensagem"></textarea>
+                    <span class="form-grupo__erro" id="messageErro"></span>
+                </div>
+                <div>
+                    <button class="form-botao" type="submit">Enviar</button>
+                </div>
             </form>
         </div>
     </section>
@@ -183,6 +198,8 @@
         <p class="rodape__texto">Desenvolvido por Stephanny Monteiro</p>
         <p class="rodape__texto">copyright ©2024</p>
     </footer>
+    
+    <script src="script.js" defer></script>
 </body>
 
 </html>
