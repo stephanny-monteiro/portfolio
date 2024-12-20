@@ -1,6 +1,6 @@
-// Validação do formulário de contato
+// Validação do formulário de contato.
 
-// campos
+// campos.
 const nameInput = document.getElementById('name'); 
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
@@ -13,11 +13,11 @@ const messageErro = document.getElementById('messageErro');
 // botão.
 const botaoEnviar = document.querySelector('.form-botao'); // Seleciona o botão.
 
-// event listeners
-// input-name
+// event listeners.
+// input-name.
 nameInput.addEventListener("input", () => {
     // Função de callback que será executada quando o evento "input" ocorrer.
-    const resultado = validarName(this.value); // this.value pega o valor do input.
+    const resultado = validarName(nameInput.value); //  a função acessa e valida o valor da variável constante de "input".
     nameErro.textContent = resultado.mensagemErro;
     nameErro.classList.toggle('mostrar-erro', !resultado.valido);
 });
@@ -35,10 +35,10 @@ function validarName(nameInput) {
     return { valido: erroName === "", mensagemErro: erroName };
 };
 
-// input-email
+// input-email.
 emailInput.addEventListener("input", () => {
     // Função de callback que será executada quando o evento "input" ocorrer.
-    const resultado = validarEmail(this.value); // this.value pega o valor do input. 
+    const resultado = validarEmail(emailInput.value); // a função acessa e valida o valor da variável constante de "input". 
     emailErro.textContent = resultado.mensagemErro;
     emailErro.classList.toggle('mostrar-erro', !resultado.valido);
 });
@@ -57,10 +57,10 @@ function validarEmail(emailInput) {
     return { valido: erroEmail === "", mensagemErro: erroEmail };
 };
 
-// input-message
+// input-message.
 messageInput.addEventListener("input", () => {
     // Função de callback que será executada quando o evento "input" ocorrer.
-    const resultado = validarMessage(this.value); // this.value pega o valor do input.
+    const resultado = validarMessage(messageInput.value); // a função acessa e valida o valor da variável constante de "input".
     messageErro.textContent = resultado.mensagemErro;
     messageErro.classList.toggle('mostrar-erro', !resultado.valido);
 });
@@ -78,8 +78,8 @@ function validarMessage(messageInput) {
     return { valido: erroMessage === "", mensagemErro: erroMessage };
 };
 
-// event listener
-// submit
+// event listener.
+// submit.
 botaoEnviar.addEventListener('submit', (evento) => {
     evento.preventDefault();
 

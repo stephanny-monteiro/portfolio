@@ -20,4 +20,4 @@ Meu portfólio é uma página web responsiva de apresentação pessoal que reún
 Para acessar o código-fonte do projeto, clique no link: [Portfolio](https://github.com/stephanny-monteiro/portfolio).
 
 **Página do projeto**
-Para acessar a página do projeto, clique no link.
+Para acessar a página do projeto, clique no link: 
